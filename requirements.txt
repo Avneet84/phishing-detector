@@ -1,0 +1,7 @@
+gradio
+scikit-learn
+pandas
+numpy
+requests
+beautifulsoup4
+python-whois
