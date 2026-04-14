@@ -1,3 +1,4 @@
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from pydantic import BaseModel
 import pickle
@@ -9,7 +10,13 @@ import whois
 from urllib.parse import urlparse
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all (for now)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Load model
 model = pickle.load(open('phishing.pkl', 'rb'))
 vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
