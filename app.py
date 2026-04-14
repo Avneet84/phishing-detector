@@ -248,7 +248,7 @@ interface = gr.Interface(
     inputs=gr.Textbox(label="Enter URL"),
     outputs=gr.Textbox(label="Result"),
     title="🔐 Phishing Detector API"
-)
+).queue()
 
 # IMPORTANT for deployment
-interface.launch(server_name="0.0.0.0", server_port=7860)
+interface.launch(server_name="0.0.0.0", server_port=7860, share=True)
