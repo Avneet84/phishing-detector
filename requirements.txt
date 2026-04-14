@@ -1,7 +1,9 @@
-gradio
+fastapi
+uvicorn
 scikit-learn
 pandas
 numpy
 requests
 beautifulsoup4
 python-whois
+BaseModel
